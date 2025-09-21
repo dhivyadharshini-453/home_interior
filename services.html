@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRB Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+   /* Hero Banner */
+    .hero-banner {
+      background: url('./assest/mainbanner.jpg') no-repeat center center/cover;
+      height: 400px;
+      position: relative;
+      color: white;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+
+   .navbar.custom-navbar {
+  
+  background-color: #e67e22 !important; /* Orange background */
+}
+
+/* Navbar Links - Always White */
+.navbar .nav-link {
+  color: #ffffff !important;   /* White text */
+  font-weight: 500;            /* Bold */
+  font-size: 1.1rem;           /* Increase size */
+  
+}
+
+/* Brand Text White */
+.navbar .navbar-brand {
+  color: #ffffff !important;  /* White text/logo */
+}
+
+
+    .services-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.service-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1 1 calc(33.333% - 20px);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .navbar-brand img {
+    height: 150px;
+  }
+  body {
+    padding-top: 10px; /* Adjust padding to match logo height */
+  }
+}
+@media (max-width: 992px) {
+  .service-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    flex: 1 1 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div class="container-fluid d-flex align-items-center">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+      <img src="./assest/logo2.png" alt="SRB Logo" style="height: 140px;">
+    </a>
+
+    <!-- Toggler Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Our Interior Design Services</h2>
+    <div class="service-card-container">
+
+      <!-- Home & Villa -->
+      <div class="service-card">
+        <img src="./assest/interiors/villa.jpg" alt="Home and Villa">
+        <h3>Home & Villa Interiors</h3>
+<p>Transform your house into a luxurious haven with our bespoke Home & Villa interior design services. We specialize in curating personalized living spaces that exude elegance, warmth, and comfort. Whether you own a modern villa or a traditional bungalow, our expert team integrates classic aesthetics with contemporary design principles to match your lifestyle. From grand entryways to serene bedrooms and stylish outdoor lounges, every element is thoughtfully planned. We focus on maximizing space, optimizing natural light, and selecting textures and materials that bring character to your home. Our villa interiors combine fine craftsmanship, customized furniture, and intelligent lighting for a timeless and sophisticated look. We also consider Vastu, ergonomics, and eco-friendly materials to bring peace, style, and sustainability under one roof. Let us turn your dream home into a masterpiece.</p>
+      </div>
+
+      <!-- Apartment -->
+      <div class="service-card">
+        <img src="./assest/interiors/apartment.jpg" alt="Apartment">
+        <h3>Apartment Interiors</h3>
+<p>Our Apartment Interior Design service is all about making small spaces feel grand and functional without compromising style. We understand the unique challenges of urban living, such as limited floor space and awkward layouts. That's why we specialize in smart storage, multi-purpose furniture, and space-saving techniques that maximize every inch of your apartment. From cozy studio apartments to multi-bedroom flats, we design layouts that ensure flow, comfort, and visual appeal. Our experts blend modern aesthetics with practical design elements to deliver a home that's beautiful, livable, and efficient. We use neutral color palettes, clever lighting, and intelligent furniture placement to open up rooms and make them feel more spacious. Whether you're a single professional, a couple, or a family, we personalize the design to reflect your needs and personality. We make apartments not just livable—but loveable.</p>
+      </div>
+
+      <!-- Rooms -->
+      <div class="service-card">
+        <img src="./assest/interiors/bedroom/20.jpg" alt="Rooms">
+        <h3>Room Design</h3>
+<p>Whether you want to redesign a single room or give your entire house a consistent vibe, our Room Design service caters to your specific needs. We approach every room with a fresh perspective, taking into account its purpose, size, natural lighting, and your personal style preferences. From minimalist Scandinavian bedrooms to eclectic Boho living rooms, we provide mood boards, 3D renders, and full-service execution. Our team emphasizes balance, harmony, and flow between furniture, textures, and colors. We also integrate storage, decor elements, lighting layers, and personalized touches that make a space truly yours. Each room, whether large or small, is designed to be both functional and aesthetically pleasing. We also provide solutions for rental homes or quick refreshes. So whether you're building from scratch or renovating, we’ll bring life, energy, and charm to every corner of your room.</p>
+      </div>
+
+      <!-- Master Bedroom -->
+      <div class="service-card">
+        <img src="./assest/interiors/bedroom/15.jpg" alt="Master Bedroom">
+        <h3>Master Bedroom</h3>
+<p>Your master bedroom is more than just a place to sleep—it's your sanctuary. We design master bedrooms that promote relaxation, comfort, and style. Our designs focus on creating a peaceful ambiance using calming color palettes, luxurious fabrics, ergonomic furniture, and lighting that enhances mood. Whether you prefer a plush, hotel-like bedroom or a modern minimalist retreat, we tailor the space to match your personality and lifestyle. We integrate spacious wardrobes, reading nooks, and even work-from-home corners without compromising elegance. Attention is given to ventilation, acoustic privacy, and natural light to ensure a healthy and restful environment. Smart automation for lights, curtains, and climate control can also be incorporated for added convenience. Let us craft a bedroom that helps you unwind, recharge, and wake up inspired ev
+      </div>
+
+      <!-- Guest Bedroom -->
+      <div class="service-card">
+        <img src="./assest/interiors/guestroom.jpg" alt="Guest Bedroom">
+        <h3>Guest Bedroom</h3>
+<p>Make your guests feel at home with a thoughtfully designed guest bedroom. This space should be warm, inviting, and functional, offering a hotel-like experience with a personal touch. Our guest bedroom designs blend comfort with style, providing a relaxing space for visitors while also doubling up as a multi-use room when not occupied. We use soft textures, neutral tones, and cozy bedding to enhance comfort. Smart storage options ensure the room remains clutter-free, and added touches like reading lights, a mirror, and a small workspace make it convenient for short- or long-term stays. We also pay attention to accessibility, especially for elderly guests, and provide layout solutions that work in tight spaces. Whether it’s for family visits or Airbnb hosting, we make sure your guest bedroom leaves a lasting impression.</p>
+      </div>
+
+      <!-- Kids Room -->
+      <div class="service-card">
+        <img src="./assest/interiors/kidsroom.jpg" alt="Kids Room">
+        <h3>Kids Room</h3>
+<p>Designing a kid’s room requires a perfect blend of imagination, function, and safety. Our Kids Room Interior service creates lively, creative, and age-appropriate spaces that support growth, play, and learning. We focus on vibrant colors, fun furniture, and thematic decor—be it jungle, space, fairytale, or superhero themes. At the same time, we ensure the room evolves with your child through smart modular layouts and flexible furniture. Ample storage is included for toys, clothes, books, and more, keeping the room neat yet playful. We use non-toxic paints, rounded furniture, and child-safe materials to ensure safety. Lighting is tailored for both play and sleep, and we can include study corners, blackboards, or reading nooks. With our thoughtful design, a kid's room becomes a world of wonder and comfort where dreams begin.</p>
+      </div>
+
+      <!-- Study Room -->
+      <div class="service-card">
+        <img src="./assest/interiors/studyroom.jpg" alt="Study Room">
+        <h3>Study Room</h3>
+<p>A well-designed study room can significantly boost productivity, focus, and creativity. Whether it’s a student’s reading space or a professional’s home office, we design study rooms tailored to your working habits. Our layouts focus on ergonomics, natural lighting, minimal distractions, and smart storage for books, gadgets, and stationery. We include comfortable chairs, functional desks, cable management solutions, and calming color schemes that help maintain concentration. Shelving systems, pin boards, and hidden storage ensure everything is within reach but out of sight. We also offer soundproofing and acoustic treatments for added privacy. Depending on your needs, we can create a minimal study nook or a fully-equipped home office with smart tech integration. With our design, your study room becomes a personal command center for learning, working, or dreaming big.</p>
+      </div>
+
+      <!-- Kitchen -->
+      <div class="service-card">
+        <img src="./assest/interiors/kitchen/7.jpg" alt="Kitchen">
+        <h3>Modular Kitchen</h3>
+<p>Modern living demands kitchens that are both beautiful and highly functional. Our Modular Kitchen designs are customized to suit your cooking style, family size, and available space. We offer L-shaped, U-shaped, parallel, island, and open kitchen layouts with a wide choice of finishes and hardware. Storage optimization is our specialty—we include pull-out cabinets, corner carousels, soft-close drawers, and built-in appliances to keep your kitchen clutter-free. Countertop materials are chosen for durability and visual appeal, while lighting is layered for preparation, cooking, and ambiance. Ventilation, hygiene, and safety are top priorities. Whether you're a casual cook or a gourmet chef, we ensure your kitchen is ergonomic, easy to maintain, and a joy to use. Let us turn your everyday kitchen routine into a delightful culinary experience.</p>
+      </div>
+
+      <!-- Living Room -->
+      <div class="service-card">
+        <img src="./assest/interiors/livingroom/20.jpg" alt="Living Room">
+        <h3>Living Room</h3>
+<p>The living room is the heart of your home—where guests are entertained and families gather. Our Living Room Interior service creates stylish, comfortable spaces that reflect your personality and meet your lifestyle needs. We balance furniture layout, color schemes, lighting, and decor to create a cohesive and welcoming environment. Whether you want a bold, maximalist look or a calm, minimalistic setting, we tailor it to your vision. We ensure optimal seating arrangements for conversations, add focal points like statement walls or TV units, and bring in textures through rugs, curtains, and cushions. Lighting plays a huge role—we incorporate layered lighting including ambient, accent, and task lights. Smart home integrations and customized shelving complete the experience. With our design, your living room will become your home’s most cherished space.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

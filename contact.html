@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRB Interiors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 90px; /* space for fixed navbar */
+    }
+
+    /* Navbar */
+    .navbar.custom-navbar {
+      background-color: #e67e22 !important; /* Orange */
+    }
+    .navbar .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .navbar .navbar-brand {
+      color: #ffffff !important;
+    }
+
+    /* Footer */
+       .footer-top-links {
+      font-size: 13px;
+      color: #333;
+      padding: 15px 10px;
+      text-align: center;
+      line-height: 2em;
+      border-top: 1px solid #eee;
+    }
+
+    .footer {
+      background-color: #fff;
+      padding: 40px 0 20px;
+      border-top: 2px solid #f5b041;
+      font-size: 14px;
+    }
+
+    .footer .footer-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .footer .social-icons a {
+      color: #000;
+      font-size: 18px;
+      margin: 0 8px;
+      transition: 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+      color: #f5b041;
+    }
+
+    .footer .footer-column h6 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #f5b041;
+    }
+
+    .footer .footer-column a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 6px;
+    }
+
+    .footer .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+      color: #888;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-brand img {
+        height: 150px;
+      }
+      body {
+        padding-top: 10px; /* Adjust padding to match logo height */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+  <div class="container-fluid d-flex align-items-center">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+      <img src="./assest/logo2.png" alt="SRB Logo" style="height: 140px;">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+
+<!-- Content -->
+<div class="container my-5">
+  <h1 class="text-center">Welcome to SRB Home and Office Interior</h1>
+</div>
+
+<!-- Footer -->
+<footer class="pt-5 pb-3 footer">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Column 1 -->
+      <div class="col-md-4 footer-column">
+        <h6>Our Location’s</h6>
+        <p>SRB Home And Office Interior Design</p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-4 footer-column" id="contact">
+        <h6>Contact SRB Home and Office Interior Design in Bangalore</h6>
+        <p><i class=""></i>OUR WEBSITE: <a href="srbinterior.com">www.srbinterior.com</a></p>
+        <p><i class="bi bi-telephone-fill text-warning"></i> +91-9886801217</p>
+        <p><i class="bi bi-geo-alt-fill text-warning"></i> #No.4, 1st Floor, Kempe Gowda Layout, HBR Layout, Bangalore-560043.</p>
+        <p><i class="bi bi-envelope-fill text-warning"></i> interiorssrb@gmail.com</p>
+        
+
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-4 footer-column">
+        <h6>Find Us on Map</h6>
+        <div class="map-container ratio ratio-16x9">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8076946421573!2d77.63575107507594!3d13.01377118730099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae171b12d198df%3A0x8af4a92c4a27ad89!2sHBR%20Layout%2C%20Bengaluru%2C%20Karnataka%20560043!5e0!3m2!1sen!2sin!4v1694000000000!5m2!1sen!2sin" 
+            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Intro -->
+<footer class="footer">
+  <div class="container text-center">
+    <div class="footer-intro">
+    
+      <!-- <p><strong>SRB Interiors & Decorators</strong> is a professionally managed company well known for being one of the best and most affordable interior designers in Bangalore.</p> -->
+       
+      <div class="social-icons my-3">
+        <a href="https://www.facebook.com/profile.php?id=61580999464140"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/srb_interior_/"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      
+      </div>
+    </div>
+
+
+
+    <div class="footer-bottom mt-4">
+      <p>Copyright © 2025 SRB HOME and OFFICE INTERIOR. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

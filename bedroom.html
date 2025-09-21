@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SRB Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+      /* Hero Banner */
+   .hero-banner {
+  background: url('./assest/mainbanner.jpg') no-repeat center center/cover;
+  height: 50vh;              /* Full screen height */
+  width: 100%;                /* Full width */
+  position: relative;
+  color: white;
+}
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+
+ /* Navbar Active Link */
+    
+
+.navbar.custom-navbar {
+  
+  background-color: #e67e22 !important; /* Orange background */
+}
+
+/* Navbar Links - Always White */
+.navbar .nav-link {
+  color: #ffffff !important;   /* White text */
+  font-weight: 500;            /* Bold */
+  font-size: 1.1rem;           /* Increase size */
+  
+}
+
+/* Brand Text White */
+.navbar .navbar-brand {
+  color: #ffffff !important;  /* White text/logo */
+}
+
+  
+    /* Breadcrumb */
+    .breadcrumb-custom {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* Filter Links */
+    .filter-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .filter-links a:hover,
+    .filter-links a.active {
+      color: white;
+      background-color: #f15b2a;
+    }
+
+    /* Gallery Images */
+.gallery-img {
+  width: 100%;
+  height: auto; /* Let image height adjust based on aspect ratio */
+  max-height: 500px; /* Optional: limit maximum height if needed */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .modal-enlarged-img {
+      max-width: 250%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    /* Responsive Typography */
+
+    @media (min-width: 992px) {
+  .navbar-brand img {
+    height: 150px;
+  }
+  body {
+    padding-top: 10px; /* Adjust padding to match logo height */
+  }
+}
+    @media (max-width: 768px) {
+      .hero-text {
+        font-size: 2rem;
+        bottom: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-text {
+        font-size: 1.5rem;
+        bottom: 15px;
+      }
+
+      .gallery-img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div class="container-fluid d-flex align-items-center">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+      <img src="./assest/logo2.png" alt="SRB Logo" style="height: 140px;">
+    </a>
+
+    <!-- Toggler Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<div class="hero-banner d-flex align-items-center justify-content-center">
+  <div class="hero-text">OUR PORTFOLIO</div>
+</div>
+
+<!-- Breadcrumb -->
+<div class="container breadcrumb-custom">
+  <p>Home / Interior Design Portfolio</p>
+</div>
+
+<!-- Filter Links -->
+<div class="container text-center my-4 filter-links">
+  <a href="portfolio.html" class="active">All</a>
+  <a href="bedroom.html" class="active">BedRoom</a>
+  <a href="kitchen.html" class="active">Modular Kitchen</a>
+  <a href="livingroom.html" class="active">Living Room</a>
+</div>
+
+<!-- Portfolio Grid -->
+<div class="container">
+  <div class="row g-3">
+
+    <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/1.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 1" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/2.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 2" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/3.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 3" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+    <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/4.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/5.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/6.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/7.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/8.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/9.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/10.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/11.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/12.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/13.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/14.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/15.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/16.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/17.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/18.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/19.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+        <div class="col-md-6 col-sm-6">
+      <img src="./assest/interiors/bedroom/20.jpg" class="gallery-img img-fluid rounded"
+           alt="Portfolio 4" data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="showImage(this.src)">
+    </div>
+
+  
+
+  </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0 text-center">
+      <button type="button" class="btn-close btn-close-white ms-auto p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="modalImage" src="" class="modal-enlarged-img img-fluid rounded shadow" alt="Enlarged Portfolio Image">
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Image Click Handler -->
+<script>
+  function showImage(src) {
+    document.getElementById('modalImage').src = src;
+  }
+</script>
+
+</body>
+</html>
